@@ -36,7 +36,7 @@ public class ServiceImpl extends UnicastRemoteObject implements Service {
     }
 
     @Override
-    public void getResult(int num) throws RemoteException {
+    public void getResult(int num) throws RemoteException, NullPointerException {
         numOfPrimes.add(num);
 
         if (queue.isEmpty()) {
@@ -50,7 +50,7 @@ public class ServiceImpl extends UnicastRemoteObject implements Service {
     }
 
     @Override
-    public void getSumOfPrimes(ArrayList<Integer> list) {
+    public void getSumOfPrimes(ArrayList<Integer> list) throws RemoteException, NullPointerException {
         int product = 0;
         for (int num : list) {
             product += num;
