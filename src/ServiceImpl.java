@@ -59,7 +59,7 @@ public class ServiceImpl extends UnicastRemoteObject implements Service {
         end = System.nanoTime();
 
         System.out.println("Sum of primes: " + product);
-        System.out.println("Time: " + (end - start)/1000000000);
+        System.out.println("Time: " + (end - start));
 
     }
 }
